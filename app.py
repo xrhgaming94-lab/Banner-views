@@ -22,7 +22,7 @@ BANNER_END_Y = 0.65
 # =======================================================
 
 # Your Info API
-INFO_API_URL = "https://info-api-eosin.vercel.app/player-info"
+INFO_API_URL = "https://infoooooo-v6v5.vercel.app/info"
 
 BASE64 = "aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL1NoYWhHQ3JlYXRvci9pY29uQG1haW4vUE5H"
 info_URL = base64.b64decode(BASE64).decode("utf-8")
@@ -238,10 +238,10 @@ def process_banner_image(data, avatar_bytes, banner_bytes, pin_bytes):
 
 @app.get("/")
 async def home():
-    return {"status": "Banner API Running", "endpoint": "/profile?uid=UID"}
+    return {"status": "Banner API Running", "endpoint": "info?uid=UID&region=ind"}
 
 
-@app.get("/profile")
+@app.get("/info")
 async def get_banner(uid: str):
     if not uid:
         raise HTTPException(status_code=400, detail="UID required")

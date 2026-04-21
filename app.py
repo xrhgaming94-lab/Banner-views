@@ -22,7 +22,7 @@ BANNER_END_Y = 0.65
 # =======================================================
 
 # Your Info API
-INFO_API_URL = "https://infoooooo-v6v5.vercel.app/accinfo"
+INFO_API_URL = "http://160.187.23.198:2001/player-info"
 
 BASE64 = "aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL1NoYWhHQ3JlYXRvci9pY29uQG1haW4vUE5H"
 info_URL = base64.b64decode(BASE64).decode("utf-8")
@@ -98,7 +98,7 @@ def load_font(size: int, bold: bool = False):
 
 # ================= INFO FETCH =================
 async def fetch_info(uid: str, retries: int = 3, delay: float = 0.6):
-    url = f"{INFO_API_URL}?uid={uid}&region=ind"
+    url = f"{INFO_API_URL}?uid={uid}"
     last_err = None
 
     for attempt in range(1, retries + 1):

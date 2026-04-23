@@ -22,7 +22,7 @@ BANNER_END_Y = 0.65
 # =======================================================
 
 # Your Info API
-INFO_API_URL = "http://160.187.23.198:2001/player-info"
+INFO_API_URL = "https://infoooooo-v6v5.vercel.app/accinfo"
 
 BASE64 = "aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL1NoYWhHQ3JlYXRvci9pY29uQG1haW4vUE5H"
 info_URL = base64.b64decode(BASE64).decode("utf-8")
